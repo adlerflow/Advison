@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the MCP Adler Tools repository - a JavaScript-based MCP (Model Context Protocol) server that provides development tools integration with Claude Desktop. The project provides local development tools for Swift/Xcode and includes a Cloudflare Worker deployment for OAuth authentication at advison.org.
 
+**Git Repository:** https://github.com/adlerflow/Advison.git
+
 ## Key Commands
 
 ### Development
@@ -28,6 +30,22 @@ npm run setup
 cd advison-deployment
 wrangler deploy  # Deploy Cloudflare Worker
 wrangler tail    # View live logs
+```
+
+### Git Commands
+```bash
+# Check status
+git status
+
+# Stage and commit changes
+git add .
+git commit -m "Your commit message"
+
+# Push to GitHub
+git push origin main
+
+# Pull latest changes
+git pull origin main
 ```
 
 ## Architecture
