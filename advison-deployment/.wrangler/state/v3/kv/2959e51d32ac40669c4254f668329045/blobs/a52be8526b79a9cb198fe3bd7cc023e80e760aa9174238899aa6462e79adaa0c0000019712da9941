@@ -1,0 +1,1 @@
+{"client_id":"advison_default_client_0873c3ab5dae6130","client_secret":"UQmfDMdCEzmZV3JlmcgnkjbzfkeC7rWVs8UStcgPOuQ=","client_name":"Default OAuth Client","redirect_uris":["http://localhost:3000/callback","https://advison.org/callback"],"grant_types":["authorization_code","refresh_token"],"scopes":["read","write","admin"]}

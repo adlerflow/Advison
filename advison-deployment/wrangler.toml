@@ -1,0 +1,44 @@
+name = "advison-oauth2"
+main = "worker.js"
+compatibility_date = "2023-05-18"
+account_id = "ecb43159c683f26b0b9faa653211652a"
+routes = [
+  { pattern = "advison.org/*", zone_id = "5e5a896d958ebd677459ec5d4146ae9a" },
+  { pattern = "api.advison.org/*", zone_id = "5e5a896d958ebd677459ec5d4146ae9a" },
+  { pattern = "dashboard.advison.org/*", zone_id = "5e5a896d958ebd677459ec5d4146ae9a" }
+]
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# KV Namespaces for storing OAuth data
+[[kv_namespaces]]
+binding = "OAUTH_CODES"
+id = "77f12743e937484fa285726be2de5a57"
+
+[[kv_namespaces]]
+binding = "OAUTH_TOKENS"
+id = "28d6f345aef3422ea1f7f5aa24039baa"
+
+[[kv_namespaces]]
+binding = "OAUTH_CLIENTS"
+id = "2959e51d32ac40669c4254f668329045"
+
+# D1 Database for persistent storage (optional)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "advison-oauth"
+# database_id = "your_d1_database_id"
+
+# Environment variables (set these in Cloudflare dashboard)
+# Diese werden jetzt als Secrets gesetzt, nicht als vars
+# [vars]
+# GITHUB_CLIENT_ID = "your_github_client_id"
+# GOOGLE_CLIENT_ID = "your_google_client_id"
+# JWT_SECRET = "your_jwt_secret"
+
+# Durable Objects for session management (optional)
+# [[durable_objects.bindings]]
+# name = "SESSIONS"
+# class_name = "SessionManager"
+# script_name = "worker"
