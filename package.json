@@ -21,7 +21,9 @@
     "test:remote": "jest src/remote/**/*.test.js",
     "setup": "./setup.sh",
     "setup-oauth": "./setup-oauth.sh",
-    "setup-remote": "./setup-remote.sh"
+    "setup-remote": "./setup-remote.sh",
+    "oauth-mcp": "node src/oauth-mcp-server.js",
+    "setup-oauth-client": "node setup-oauth-client.js"
   },
   "keywords": [
     "mcp",

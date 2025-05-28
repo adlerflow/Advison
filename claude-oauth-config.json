@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "adler-tools-oauth": {
+      "command": "node",
+      "args": ["/Users/adler/mcp-adler-tools/src/oauth-mcp-server.js"],
+      "env": {}
+    }
+  }
+}
